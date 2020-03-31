@@ -1,0 +1,31 @@
+.random-planet {
+    
+    .image-box {
+        flex: 1 1 auto;
+        text-align: center;
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+       
+    }
+    .body {
+         padding: 0 15px 0 0;
+         flex: 1 1 60%;
+         display: flex;
+         flex-direction: column;
+    }
+    .body__title {
+        color: red;
+        text-align: center;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        
+    }
+    .term {
+        padding: 0 10px 0 0;
+    }
+    ul li {
+        font-size: 18px;
+    }
+}

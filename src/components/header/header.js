@@ -1,13 +1,13 @@
 import React from 'react';
-import './header.css';
+import styles from './header.module.scss';
 
 const Header = () => {
     return (
-        <div className='header row d-flex my-2 border'>
+        <div className={`${styles.header} row d-flex my-2 border`}>
             <h2>
                 <a href='#'>Star Wars</a>
             </h2>
-            <ul className='nav justify-content-start'>
+            <ul className={`nav justify-content-start`}>
                 <li className='nav-item'>
                     <a className='nav-link' href="#">People</a>
                 </li>

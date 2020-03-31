@@ -1,0 +1,28 @@
+.header  {
+    h2 {
+        max-height: 100px;
+        flex: 1 1 auto;
+    }
+    ul {
+        flex: 1 1 auto;
+    }
+    ul li {
+        font-size: 1.25rem;
+    }
+    ul li:hover {
+        background-color: #444;
+        color: #dfe9e6;
+    }
+    ul li a:hover {
+        color: #dfe9e6;
+    }
+    h2 a {
+        color: #dfe9e6;
+        text-decoration: none;
+    }
+    h2 a:hover {
+        color: #00bc8c;
+    }
+}
+
+
