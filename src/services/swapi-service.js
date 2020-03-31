@@ -8,8 +8,8 @@ export default class SwapiService {
     const resolve = await fetch(`${this._apiBase}${url}`);
     if (!resolve.ok)
       throw new Error(`Could not fetch ${url}, received ${resolve.status}`);
-    const response = await resolve.json();
-    return response;
+    return await resolve.json();
+    
   }
   // People
   async getAllPeople() {
