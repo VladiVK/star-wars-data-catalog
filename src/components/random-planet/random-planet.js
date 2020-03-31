@@ -5,15 +5,14 @@ import Spinner from '../../components/spinner';
 import ErrorIndicator from '../../components/error-indicator';
 
 export default class RandomPlanet extends Component {
-  constructor() {
-    super();
-
-    this.state = {
+  state = {
       planet: {},
       loading: true,
-    };
+  };
+  constructor() {
+    super();
     this.swapiService = new SwapiService();
-    this.updatePlanet(); 
+    this.updatePlanet();
     
   }
   onPlanetLoaded = (planet) => {
@@ -30,7 +29,7 @@ export default class RandomPlanet extends Component {
     });
   }
   updatePlanet() {
-    
+
     const id = Math.floor(Math.random() * 25) + 2;
     
       this.swapiService
