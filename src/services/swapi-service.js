@@ -38,11 +38,11 @@ export default class SwapiService {
     const starShip = await this.getResources(`/starships/${id}`);
     return this._transformStarShip( starShip )
   }
-  _extractId(elem) {
+  _extractId = (elem) => {
       const idRegExp = /\/([0-9]*)\/$/;
       return elem.url.match(idRegExp)[1];
   }
-  _transformPlanet(planet) {
+  _transformPlanet = (planet) => {
     
     return {
       id: this._extractId(planet),
@@ -51,8 +51,8 @@ export default class SwapiService {
       rotationPeriod: planet.rotation_period,
       diameter: planet.diameter
     };
-  }
-  _transformStarShip( starShip ) {
+  };
+  _transformStarShip = ( starShip ) => {
 
     return {
       id: this._extractId(starShip),
@@ -65,8 +65,8 @@ export default class SwapiService {
       passengers: starShip.passengers,
       cargoCapacity: starShip.cargo_capacity,
     }
-  }
-  _transformPerson( person ) {
+  };
+  _transformPerson = ( person ) => {
     return {
       id: this._extractId(person),
       name: person.name,
