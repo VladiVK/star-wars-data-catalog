@@ -10,7 +10,7 @@ import ItemList from "../item-list";
 export default class App extends Component {
 
     state = {
-        selectedPerson: null,
+        selectedPerson: 1,
     }
 
     onPersonSelected = (id) => {
