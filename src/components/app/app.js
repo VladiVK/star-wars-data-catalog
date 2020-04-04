@@ -6,29 +6,31 @@ import Header from "../header";
 import RandomPlanet from "../random-planet";
 import PersonDetails from "../person-details";
 import ItemList from "../item-list";
+import ErrorIndicator from "../error-indicator";
+import PeoplePage from "../people-page/people-page";
 
 export default class App extends Component {
 
-    state = {
-        selectedPerson: 1,
-    }
+  state = {
+    hasError: false,
+  };
 
-    onPersonSelected = (id) => {
-        this.setState( {
-            selectedPerson: id,
-        })
-        
-    }
+  componentDidCatch() {
+    console.log("componentDidCatch()");
+    this.setState({ hasError: true });
+  }
   render() {
+    if (this.state.hasError) {
+      return <ErrorIndicator />;
+    }
     return (
       <div className="container">
         <Header />
         <RandomPlanet />
+        <PeoplePage />
+        <PeoplePage />
+        <PeoplePage />
 
-        <div className={` row d-flex`}>
-          <ItemList onItemSelected={ this.onPersonSelected } />
-          <PersonDetails personId={ this.state.selectedPerson } />
-        </div>
       </div>
     );
   }

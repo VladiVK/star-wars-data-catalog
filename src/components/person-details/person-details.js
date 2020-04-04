@@ -8,7 +8,6 @@ export default class PersonDetails extends Component {
     swapiService = new SwapiService();
 
     state = {
-        
         person: null,
     }
 
@@ -53,7 +52,7 @@ export default class PersonDetails extends Component {
     return (
         
         <div className={`${styles.personDetails} `}>
-        <div className={`${styles.personImage}`}>
+            <div className={`${styles.personImage}`}>
                 <img className={`rounded`}
                      src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
                      alt="person"/>
@@ -83,35 +82,3 @@ export default class PersonDetails extends Component {
   }
 }
 
-// const PersonView = ({person}) => {
-//     const {id, name, gender, birthYear, eyeColor} = person;
-//     return (
-//         <React.Fragment>
-//         <div className={`${styles.personImage}`}>
-//                 <img className={`rounded`}
-//                      src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
-//                      alt="person"/>
-                
-//             </div>
-//             <div className={`card ${styles.personCard}`}>
-//                     <div className={`card-body`}>
-//                         <h5 className={`card-title`}>{`${name} **ID: ${this.props.personId}`} </h5>
-//                         <ul className={`list-group list-group-flush`}>
-//                             <li className={`list-group-item`}>
-//                                 <span className={`${styles.term}`}>Gender:</span>
-//                                 <span>{gender}</span>
-//                             </li>
-//                             <li className={`list-group-item`}>
-//                                 <span className={`${styles.term}`}>Birth Year:</span>
-//                                 <span>{birthYear}</span>
-//                             </li>
-//                             <li className={`list-group-item`}>
-//                                 <span className={`${styles.term}`}>Eye Color:</span>
-//                                 <span>{eyeColor}</span>
-//                             </li>
-//                         </ul>
-//                     </div>
-//             </div>
-//         </React.Fragment>
-//     )
-// }
